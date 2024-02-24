@@ -102,7 +102,7 @@
                             <a href="/" class="nav-link {{ ($title==='welcome')?'active':'' }}">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
-                                    Dashboard
+                                    Home
 
                                 </p>
                             </a>
