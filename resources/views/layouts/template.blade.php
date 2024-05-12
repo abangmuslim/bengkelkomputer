@@ -37,14 +37,14 @@
 
                 <li class="nav-item dropdown">
                     <a class="nav-link" data-toggle="dropdown" href="#">
-                        <i class="far fa-user mr-2"></i>
+                        <i class="far fa-user mr-2">  ({{ Auth::user()->name }})</i>
                         <span class="badge badge-warning navbar-badge"></span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                         <span class="dropdown-item dropdown-header">User Menu</span>
                         <div class="dropdown-divider"></div>
                         <a href="#" class="dropdown-item">
-                            <i class="fas fa-user mr-2"></i>
+                            <i class="fas fa-user mr-2">  ({{ Auth::user()->name }})</i>
                             <span class="float-right text-muted text-sm"></span>
                         </a>
 
@@ -86,7 +86,7 @@
                         <img src="{{ asset('dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block"> </a>
+                        <a href="#" class="d-block"> ({{ Auth::user()->name }})</a>
                     </div>
                 </div>
 
@@ -108,60 +108,60 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link {{ ($title==='Kategori') ? 'active':'' }}">
-                                <i class="nav-icon fas fa-th-large"></i>
-                                <p>
-                                    Kategori
-                                </p>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
                             <a href="#" class="nav-link {{($title==='Produk')?'active':''}}">
                                 <i class="nav-icon fas fa-boxes"></i>
                                 <p>
-                                    Produk
+                                    Layanan
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="{{ route('layanan.index')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Input Produk</p>
+                                        <p>Layanan</p>
                                     </a>
                                 </li>
+
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="{{ route('suplier.index') }}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Laporan Produk</p>
+                                        <p>Suplier</p>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="{{ route('teknisi.index') }}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Teknisi</p>
                                     </a>
                                 </li>
 
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link {{ ($title==='Customer')?'active':''}}">
+                            <a href="{{ route('pelanggan.index')}}" class="nav-link {{ ($title==='Pelanggan')?'active':''}}">
                                 <i class="nav-icon fas fa-users"></i>
                                 <p>
-                                    Customer
+                                    Pelanggan
                                 </p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link {{ ($title==='Users')?'active':''}}">
-                                <i class="nav-icon fas fa-users"></i>
+                            <a href="{{ route('user.index')}}" class="nav-link {{ ($title==='user')?'active':''}}">
+                                <i class="nav-icon fas fa-user"></i>
                                 <p>
-                                    Users
+                                    User
                                 </p>
                             </a>
                         </li>
 
+
                         <li class="nav-item">
-                            <a href="#" class="nav-link {{ ($title==='Penjualan') ? 'active':'' }}">
+                            <a href="penjualan" target="_blank" class="nav-link {{ ($title==='Penjualan') ? 'active':'' }}">
                                 <i class="nav-icon fas fa-cash-register"></i>
                                 <p>
-                                    Penjualan
+                                    Transaksi
                                 </p>
                             </a>
                         </li>
@@ -194,6 +194,15 @@
                                     </a>
                                 </li>
                             </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-users"></i>
+                                <p>
+                                    Tentang
+                                </p>
+                            </a>
                         </li>
 
 
