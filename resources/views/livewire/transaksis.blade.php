@@ -108,9 +108,9 @@
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $dt->layanan->nama }}</td>
-                                <td>@money($dt->price)</td>
+                                <td>@money($dt->harga)</td>
                                 <td>{{ $dt->jumlah}}</td>
-                                <td>@money($dt->price * $dt->jumlah)</td>
+                                <td>@money($dt->harga * $dt->jumlah)</td>
                                 <td><button class="btn btn-sm btn-danger" wire:click="delete({{ $dt->id }})"><i class=" fas fa-trash"></i></a></td>
                             </tr>
                             @endforeach
