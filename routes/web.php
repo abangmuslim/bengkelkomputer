@@ -7,6 +7,7 @@ use App\Http\Controllers\PelangganController;
 use App\Http\Controllers\SuplierController;
 use App\Http\Controllers\TeknisiController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\CetakController;
 
 
 
@@ -48,7 +49,10 @@ Route::get('penjualan',function(){
 
 Route::get('transaksi',function(){
     return view('penjualan.transaksis',[
-        "title"=>"Transaksi"
+        "title"=>"transaksi"
     ]);
     })->middleware('auth');
+
+Route::get('cetakReceipt',[CetakController::class,'receipt'])->name('cetakReceipt');
+
     

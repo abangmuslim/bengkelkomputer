@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Layanan;
-use App\Models\Suplier;
+use App\Models\suplier;
 use App\Models\teknisi;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
@@ -27,7 +27,7 @@ class LayananController extends Controller
         return view('layanan.create')->with([
             "title" => "Tambah Data Layanan",
             "teknisi"=> teknisi::all(),
-            "suplier"=> Suplier::all()
+            "suplier"=> suplier::all()
     ]);
     }
     public function store(Request $request):RedirectResponse

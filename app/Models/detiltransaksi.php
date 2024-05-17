@@ -8,17 +8,17 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Detiltransaksi extends Model
 {
-    protected $fillable=['transaksi_id','layanan_id','qty','price'];
+    protected $fillable=['transaksi_id','layanan_id','jumlah','harga'];
     use HasFactory;
 
     public function transaksi():BelongsTo
     {
-        return $this->belongsTo(Transaksi::class);
+        return $this->belongsTo(transaksi::class);
     }
 
     public function layanan():BelongsTo
     {
-        return $this->belongsTo(Layanan::class);
+        return $this->belongsTo(layanan::class);
     }
 }
 
