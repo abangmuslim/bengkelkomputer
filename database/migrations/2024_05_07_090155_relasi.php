@@ -32,7 +32,6 @@ return new class extends Migration
 
 
 
-
         Schema::table('detiltransaksis', function (Blueprint $table) {
 
             $table->foreign('transaksi_id')->references('id')->on('transaksis')

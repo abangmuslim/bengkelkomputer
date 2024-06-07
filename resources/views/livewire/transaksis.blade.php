@@ -136,7 +136,7 @@
                                     :
                             </th>
                             <th>
-                            <input type="number" class="mt-2" wire:model="uang">
+                            <input type="number" class="mt-2" wire:model.live="uang">
                             </th>
                         </tr>
                         <tr>

@@ -39,8 +39,8 @@ class Transaksis extends Component
         ]);
         $transaksi= Transaksi::select('*')->where('user_id','=',Auth::user()->id)->orderBy('id','desc')->first();
         $this->transaksi_id=$transaksi->id;
-        $produk=Layanan::where('id','=',$this->layanan_id)->get();
-        $harga=$produk[0]->harga;
+        $layanan=Layanan::where('id','=',$this->layanan_id)->get();
+        $harga=$layanan[0]->harga;
         Detiltransaksi::create([
             'transaksi_id'=>$this->transaksi_id,
             'layanan_id'=>$this->layanan_id,

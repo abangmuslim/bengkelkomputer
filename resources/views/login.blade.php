@@ -18,7 +18,7 @@
 <body class="hold-transition login-page" style="background-image: url('backgroundlogin2.jpg'); background-size: cover;">
 <div class="login-box">
   <!-- /.login-logo -->
-  <div class="card card-outline card-primary">
+  <div class="card card-outline card-primary" style="background:transparent; border: 2px solid rgba(270, 270, 270, .5); backdrop-filter:blur(2px); color:#fff; border-radius: 20px;">
     <div class="card-header text-center">
       <h1 class="h1">Bengkel <b>PC</b></h1>
     </div>
@@ -34,7 +34,7 @@
       <form action="/login" method="post">
         @csrf
         <div class="input-group mb-3">
-          <input type="email" class="form-control @error('email') is-invalid @enderror" placeholder="Email" id="email" name="email" value="{{ old('email') }}">
+          <input type="email" class="form-control @error('email') is-invalid @enderror" placeholder="Email" id="email" name="email" value="{{ old('email') }}" style="background: transparent;border: 2px solid rgba(255, 255, 255, .5);">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -47,7 +47,7 @@
           @enderror
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password" id="password" name="password">
+          <input type="password" class="form-control" placeholder="Password" id="password" name="password" style="background: transparent;border: 2px solid rgba(255, 255, 255, .5);">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
