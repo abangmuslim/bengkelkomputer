@@ -17,8 +17,11 @@
 </head>
 <body class="hold-transition login-page" style="background-image: url('backgroundlogin2.jpg'); background-size: cover;">
 <div class="login-box">
+<div style="width: 300px; margin: 100px auto; padding: 20px; background: rgba(255, 255, 255, 0.4); border-radius: 10px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);">
+
+  
   <!-- /.login-logo -->
-  <div class="card card-outline card-primary" style="background:transparent; border: 2px solid rgba(270, 270, 270, .5); backdrop-filter:blur(2px); color:#fff; border-radius: 20px;">
+  <div class="card card-outline card-primary" style="background:transparent; border: 2px solid rgba(270, 270, 270, .5); border-radius: 20px;">
     <div class="card-header text-center">
       <h1 class="h1">Bengkel <b>PC</b></h1>
     </div>
@@ -26,11 +29,12 @@
       <p class="login-box-msg">Silahkan Login Terlebih Dahulu</p>
       @if(session()->has('loginError'))
       <div class="alert alert-danger alert-dismissible">
-                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                  <h5><i class="icon fas fa-ban"></i> Alert!</h5>
-                  {{ session('loginError') }}
-                </div>
-        @endif
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <h5><i class="icon fas fa-ban"></i> Alert!</h5>
+        {{ session('loginError') }}
+      </div>
+      @endif
+      <!-- Buka halaman login: Tampilkan form untuk memasukkan email dan password. -->
       <form action="/login" method="post">
         @csrf
         <div class="input-group mb-3">
@@ -77,3 +81,7 @@
 <script src="{{asset('dist/js/adminlte.min.js')}}"></script>
 </body>
 </html>
+
+Jika user tidak ditemukan atau password salah, tampilkan pesan error.
+Login berhasil: Jika email dan password cocok, set session login dan redirect ke halaman dashboard.
+Login gagal: Jika tidak cocok, tampilkan pesan error dan minta user mengulang login.

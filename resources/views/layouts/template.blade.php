@@ -20,10 +20,10 @@
 
 </head>
 
-<body class="hold-transition sidebar-mini" style="background-image: url('../backgroundlogin.jpg')">
+<body class="hold-transition sidebar-mini" >
     <div class="wrapper">
         <!-- Navbar -->
-        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <nav class="main-header navbar navbar-expand text-decoration-white" >
             <!-- Left navbar links -->
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -37,14 +37,14 @@
 
                 <li class="nav-item dropdown">
                     <a class="nav-link" data-toggle="dropdown" href="#">
-                        <i class="far fa-user mr-2">  ({{ Auth::user()->name }})</i>
+                        <i class="far fa-user mr-2">  </i>
                         <span class="badge badge-warning navbar-badge"></span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                         <span class="dropdown-item dropdown-header">User Menu</span>
                         <div class="dropdown-divider"></div>
                         <a href="#" class="dropdown-item">
-                            <i class="fas fa-user mr-2">  ({{ Auth::user()->name }})</i>
+                            <i class="fas fa-user mr-2">  </i>
                             <span class="float-right text-muted text-sm"></span>
                         </a>
 
@@ -71,7 +71,7 @@
         <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
-        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <aside class="main-sidebar sidebar-light-indigo elevation-4">
             <!-- Brand Logo -->
             <a href="index3.html" class="brand-link">
                 <img src="{{ asset('dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
@@ -86,7 +86,7 @@
                         <img src="{{ asset('dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block"> ({{ Auth::user()->name }})</a>
+                        <a href="#" class="d-block"> </a>
                     </div>
                 </div>
 
@@ -208,10 +208,12 @@
                 </div><!-- /.container-fluid -->
             </div>
             <!-- /.content-header -->
+            
+            
             <!-- Main content -->
             <div class="content">
-                <div class="container-fluid">
-                    <div class="row">
+                <div class="container-fluid " >
+                    <div class="row" style="text-decoration-color:black;">
                         @yield('konten')
 
                     </div>

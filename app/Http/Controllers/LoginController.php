@@ -14,7 +14,10 @@ class LoginController extends Controller
     {
         return view('login');
     }
-    
+//     Validasi input: Pastikan email dan password tidak kosong. Jika kosong, tampilkan pesan error.
+// Cek database:
+// Jika user dengan email yang dimasukkan ditemukan, lakukan verifikasi password.
+
     public function authenticate(Request $request):RedirectResponse
     {
         $credentials = $request->validate([

@@ -23,7 +23,7 @@
                     <span class="info-box-icon"><i class="far fa-bookmark"></i></span>
 
                     <div class="info-box-content">
-                        <span class="info-box-text">User</span>
+                        <span class="info-box-text">Jumlah User</span>
                         <span class="info-box-number">{{$user}}</span>
 
                         <div class="progress">
@@ -43,7 +43,7 @@
                     <span class="info-box-icon"><i class="far fa-thumbs-up"></i></span>
 
                     <div class="info-box-content">
-                        <span class="info-box-text">Pelanggan</span>
+                        <span class="info-box-text">Jumlah Warga</span>
                         <span class="info-box-number">{{$pelanggan}}</span>
 
                         <div class="progress">
@@ -63,7 +63,7 @@
                     <span class="info-box-icon"><i class="far fa-calendar-alt"></i></span>
 
                     <div class="info-box-content">
-                        <span class="info-box-text">Teknisi</span>
+                        <span class="info-box-text">Jumlah Warga Penerima Bantuan</span>
                         <span class="info-box-number">{{$teknisi}}</span>
 
                         <div class="progress">
@@ -111,8 +111,8 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Nama Pelanggan</th>
-                        <th>TotalTransaksi</th>
+                        <th>Nama peserta</th>
+                        <th>Alamat</th>
                         
                     </tr>
                 </thead>

@@ -23,32 +23,32 @@
         <form action="{{ route('layanan.update',$layanan->id) }}" method="POST">
             @csrf
             @method('PUT')
-            
+
             <div class=" card-body">
                 <div class="form-group">
                     <label for="nama">Nama Layanan</label>
                     <input type="text" class="form-control" id="nama" name="nama" value="{{$layanan->nama}}">
-                </div>  
+                </div>
                 <div class="form-group">
-                  <label for="jeniskategori">Jeniskategori</label>
-                  <select class="custom-select" id="jeniskategori" name="jeniskategori">
-                  <option value="{{$layanan->jeniskategori}}" selected> {{$layanan->jeniskategori}} </option> 
-                    <option value="Hardware">Hardware</option>
-                    <option value="Software">Software</option>
-                  </select>
-                </div>                
+                    <label for="jeniskategori">Jeniskategori</label>
+                    <select class="custom-select" id="jeniskategori" name="jeniskategori">
+                        <option value="{{$layanan->jeniskategori}}" selected> {{$layanan->jeniskategori}} </option>
+                        <option value="Hardware">Hardware</option>
+                        <option value="Software">Software</option>
+                    </select>
+                </div>
                 <div class="form-group">
-                  <label for="deskripsi">Deskripsi</label>
-                  <select class="custom-select" id="deskripsi" name="deskripsi">
-                  <option value="{{$layanan->deskripsi}}" selected> {{$layanan->deskripsi}} </option> 
-                    <option value="Reparasi">Reparasi</option>
-                    <option value="Instal">Instal</option>
-                    <option value="Jual">Jual</option>
-                    <option value="Beli">Beli</option>
-                    <option value="Sewa">Sewa</option>
-                  </select>
-                </div>                     
-                
+                    <label for="deskripsi">Deskripsi</label>
+                    <select class="custom-select" id="deskripsi" name="deskripsi">
+                        <option value="{{$layanan->deskripsi}}" selected> {{$layanan->deskripsi}} </option>
+                        <option value="Reparasi">Reparasi</option>
+                        <option value="Instal">Instal</option>
+                        <option value="Jual">Jual</option>
+                        <option value="Beli">Beli</option>
+                        <option value="Sewa">Sewa</option>
+                    </select>
+                </div>
+
                 <div class="form-group">
                     <label>Suplier</label>
                     <select class="form-control" name="suplier_id">
@@ -78,8 +78,8 @@
                 <div class="form-group">
                     <label for="harga">Harga</label>
                     <input type="number" class="form-control" id="harga" name="harga" value="{{$layanan->harga}}">
-                </div> 
-                
+                </div>
+
             </div>
             <!-- /.card-body -->
 

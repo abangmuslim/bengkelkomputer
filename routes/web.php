@@ -30,7 +30,7 @@ use App\Http\Controllers\LaporanController;
 
 Route::get('/', [WelcomeController::class, 'welcome'])->middleware('auth');
 Route::resource('layanan', LayananController::class)->middleware('auth');
-Route::resource('user', UserController::class)->except('destroy', 'create', 'show', 'update', 'edit')->middleware('auth');
+Route::resource('user', UserController::class)->except('destroy', 'create', 'show', 'update', 'edit');
 Route::resource('pelanggan', PelangganController::class)->except('destroy')->middleware('auth');
 Route::resource('suplier', SuplierController::class)->except('destroy')->middleware('auth');
 Route::resource('teknisi', TeknisiController::class)->except('destroy')->middleware('auth');
